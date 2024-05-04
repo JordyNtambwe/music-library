@@ -33,8 +33,8 @@ const library = {
 const printPlaylists = function() {
 
   for (const playlistId in library.playlists) {
-       const playlist = library.playlists[playlistId];
-       console.log (`${playlist.id}: ${playlist.name} - ${playlist.tracks.length}`);
+    const playlist = library.playlists[playlistId];
+    console.log (`${playlist.id}: ${playlist.name} - ${playlist.tracks.length}`);
   }
 
 };
@@ -46,7 +46,13 @@ printPlaylists();
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 const printTracks = function() {
 
-}
+  for (const tracksId in library.tracks) {
+    const tracks = library.tracks[tracksId];
+    console.log(`${tracks.id}: ${tracks.name} by ${tracks.artist} (${tracks.album})`)
+  }
+
+};
+printTracks();
 
 
 // prints a list of tracks for a given playlist, using the following format:
