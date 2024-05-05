@@ -61,7 +61,16 @@ printTracks();
 // t02: Model View Controller by James Dempsey (WWDC 2003)
 const printPlaylist = function(playlistId) {
 
-}
+  const playlist = library.playlists[playlistId];
+  console.log(`${playlist.id}: ${playlist.name} - ${playlist.tracks.length}`)
+
+  for (let tracksId of playlist.tracks){
+    const track = library.tracks[tracksId];
+    console.log(`${track.id}: ${track.name} by ${track.artist} (${track.album})`)
+  }
+
+};
+printPlaylist("p01");
 
 
 // adds an existing track to an existing playlist
