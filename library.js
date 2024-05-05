@@ -119,6 +119,8 @@ function addPlaylist(name) {
   }
 
 };
+addPlaylist("My New Playlist");
+console.log("Library after adding a playlist:", library);
 
 
 // STRETCH:
